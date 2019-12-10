@@ -22,4 +22,4 @@ app.get('/', requireAuth, (req, res) => {
     res.send(`Your email: ${req.user.email}`);
 });
 
-app.listen(443, () => console.log('Listening on port 443'));
+app.listen(80, () => console.log('Listening on port 80'));
