@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(trackRoutes);
 
-const mongoUri = 'mongodb+srv://mongodbuser:FakeGitHubPassword@myowncluster-psihg.gcp.mongodb.net/test?retryWrites=true&w=majority';
+const mongoUri = 'mongodb://superman:FakeGitHubPassword@mongodb.mozarts.website:27017/test?authSource=admin';
+//const mongoUri = 'mongodb+srv://mongodbuser:FakeGitHubPassword@myowncluster-psihg.gcp.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(mongoUri, { useNewUrlParser: true, useCreateIndex: true });
 mongoose.connection.on('connected', () => console.log('Connected to MongoDB'));
 mongoose.connection.on('error', error => console.error('Connection error', error));
